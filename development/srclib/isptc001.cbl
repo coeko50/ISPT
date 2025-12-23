@@ -12,6 +12,10 @@
       * and the json names                                             *
       *                                                                *
       *                                                                *
+      * Maintenance                                                    *
+      * 25/12/18  add offset field to hold to make position real for   *
+      *           subord elements                                      *
+      *                                                                *
       * -------------------------------------------------------------- *
       * The procedure needs these schema definitions:                  *
       *                                                                *
@@ -37,6 +41,7 @@
       *       ISREQ                            CHARACTER(1),           *
       *       ISUPD                            CHARACTER(1),           *
       *       POS                              SMALLINT,               *
+      *       Offset                           SMALLINT,               *
       *       ELEPIC                           CHARACTER(8),           *
       *       DTYPE                            SMALLINT,               *
       *       MODE                             SMALLINT,               *
@@ -190,7 +195,7 @@
                  07  w-val     pic x(16).
                  07  filler    pic x(1).
                  07  w-key     pic 9(3).
-
+ 
         01 WORK-FIELDS.
       *    05 WRK-X                               PIC S9(4) COMP.
            05 wk-dbname2                          PIC x(8).
@@ -332,6 +337,7 @@
         77 ISREQ                PIC  X(1).
         77 ISUPD                PIC  X(1).
         77 POS                  PIC  S9(4) COMP SYNC.
+        77 offset               PIC  S9(4) COMP SYNC.
         77 ELEPIC               PIC  X(8).
         77 DTYPE                PIC  S9(4) COMP SYNC.
         77 ELE-MODE             PIC  S9(4) COMP SYNC.
@@ -368,6 +374,7 @@
         77 ISReq-i              PIC S9(4) COMP SYNC.
         77 ISUpd-i              PIC S9(4) COMP SYNC.
         77 POS-i                PIC S9(4) COMP SYNC.
+        77 offset-i             PIC S9(4) COMP SYNC.
         77 Pic-i                PIC S9(4) COMP SYNC.
         77 DTYPE-i              PIC S9(4) COMP SYNC.
         77 usage-i              PIC S9(4) COMP SYNC.
@@ -460,6 +467,8 @@
               05 ws-rseq                 PIC S9(4) COMP SYNC.
               05 ws-seq                  PIC S9(4) COMP SYNC.
               05 ws-LVL                  PIC S9(4) COMP SYNC.
+              05 ws-offset               pic s9(4) comp sync.
+
            02 w-date-id                  PIC S9(4) COMP.
            02 w-time-id                  PIC S9(4) COMP.
            02 w-datetime-id              PIC S9(4) COMP.
@@ -487,7 +496,8 @@
                                isReq
                                isUpd
                                POS
-                               elepic
+                               offset
+                              elepic
                                DTYPE
                                ele-mode
                                LEN
@@ -520,6 +530,7 @@
                                isReq-i
                                isUpd-i
                                POS-i
+                               offset-i
                                Pic-i
                                DTYPE-i
                                usage-i
@@ -681,6 +692,7 @@
            if recver-i = -1
               move 1 to recver
            end-if.
+           move  0 to  w-cur-idx.
            move rec-name    to rsyn-name-079.
            move recver      to rsyn-ver-079.
            display program-name ' where rec=' rec-name ' v' recver .
@@ -1031,16 +1043,21 @@
            move '00000' to sqlstate2.
 
            if ws-lvl-ix = 0
-              move 1 to ws-lvl-ix
+              move 1   to ws-lvl-ix
               move -1  to ws-seq(ws-lvl-ix)
               move 0   to ws-lvl(ws-lvl-ix)
+              move 0   to ws-offset(ws-lvl-ix)
            end-if.
+  
+	     
            if lvl > ws-lvl(ws-lvl-ix)
               add 1 to ws-lvl-ix
            end-if.
+
            if lvl < ws-lvl(ws-lvl-ix)
               perform until lvl not less than ws-lvl(ws-lvl-ix)
                  or  ws-lvl-ix = 2
+                 move 0 to ws-offset(ws-lvl-ix)
                  subtract 1 from ws-lvl-ix
               end-perform;
            end-if.
@@ -1048,6 +1065,8 @@
            move lvl to ws-lvl(ws-lvl-ix).
            move ws-seq(ws-lvl-ix - 1) to parent-seq.
            compute parent-seq =  ws-seq(ws-lvl-ix - 1) / 100.
+           compute ws-offset(ws-lvl-ix) = pos + wk-offset(ws-lvl-ix -1) -1.
+           move ws-offset(ws-lvl-ix) to offset.
            perform 1900-get-siblings.
 
       *    display 'ISPTC001  Ele: ' seq ' ' lvl ' ' ele.
@@ -1072,6 +1091,7 @@
               move 0 to LVL-i .
               move 0 to ISGRP-i .
               move 0 to POS-i .
+              move 0 to offset-i.
               move 0 to Pic-i .
               move 0 to DTYPE-i .
               move 0 to usage-i .
