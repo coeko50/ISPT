@@ -1,0 +1,148 @@
+spring:
+    main:
+        allow-bean-definition-overriding: true
+        bannerMode: "off"
+    mvc:
+        throw-exception-if-no-handler-found: true
+    web.resources:
+        add-mappings: false
+
+logging:
+    level:
+        ROOT: DEBUG
+        com.netflix: WARN
+        com.netflix.config: ERROR
+        com.netflix.discovery: ERROR
+        com.netflix.discovery.DiscoveryClient: OFF
+        com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient: OFF
+        org.apache.catalina: WARN
+        org.apache.coyote: WARN
+        org.hibernate.validator.internal.util.Version: WARN
+        org.springframework: WARN
+        org.springframework.boot.web.embedded: INFO
+    file:
+        enabled: true
+        name: log/api.log
+        pattern: "log/api.%d{yyyy-MM-dd}.log"
+        maxHistory: 30
+        totalSizeCap: 3GB
+
+server:
+    port: 50080
+    attls:
+        alwaysLoadCertificate: false
+        required: false
+    ssl:
+        enabled: false
+        verifySslCertificatesOfServices: true
+        protocol: TLSv1.2
+        enabledProtocols: TLSv1.2
+        ciphers: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+
+springdoc:
+      # Do not set packagesToScan here, but rather add to addPackagesToScan() in org.zowe.dbapi.config.ApplicationConfig
+      pathsToMatch: /api/v1/**
+      writer-with-order-by-keys: true
+
+security:
+    saf:
+        serviceResourceClass: "ZOWE"
+        serviceResourceNamePrefix: "SAMPLE."
+        loggersResourceClass: "${security.saf.serviceResourceClass}"
+        loggersResourceName: "${security.saf.serviceResourceNamePrefix}LOGGERS"
+    token:
+        #cookieTokenName: "zoweSdkAuthenticationToken"
+        # prevent any token from being used - an unused cookie name
+        cookieTokenName: "$DBAPI$"
+        expiration: 86400000
+    csrf:
+        api.enabled: false
+        cookieSameSite: Strict
+    logout.repository:
+        type: sharedDirectory
+        sharedDirectory: tmp
+    unauthenticated:
+        defaultListEnabled: true
+        antMatchers: /api/v1/securityTest/tokenProvider/**,/*.png,/*.ico,/*.svg,/*.json,/*.html,/*.js,/static/**
+    cors.enabled: false
+
+security.authentication: Press **Authorize** and use your mainframe credentials.
+
+apiml:
+    service:
+        # Following values are default values that can be changed by user:
+        serviceId: sampledbapi
+        title: Database API Sample Project
+        description: Generated Zowe REST API for access to application database resources
+        catalog:
+            tile:
+                id: sampledbapi
+                title: Database API Sample Project
+                description: Generated Zowe REST API for access to application database resources
+                version: 1.0.1
+        authentication:
+            scheme: bypass
+            applid:
+
+        # Following values are provided by the developer:
+        scheme: http
+        baseUrl: ${apiml.service.scheme}://${apiml.service.hostname}:${server.port}
+        homePageRelativeUrl: /
+        statusPageRelativeUrl: /actuator/info
+        healthCheckRelativeUrl: /actuator/health
+        routes:
+            - gatewayUrl: api/v1
+              serviceUrl: /api/v1
+            - gatewayUrl: ui/v1
+              serviceUrl: /
+        apiInfo:
+            - apiId: org.zowe.sample.dbapi
+              gatewayUrl: api/v1
+              version: 1.0.1
+              title: Database API Sample Project
+              description: Generated Zowe REST API for access to application database resources. ${security.authentication}
+              swaggerUrl: ${apiml.service.scheme}://${apiml.service.hostname}:${server.port}/api/v1/apiDocs
+
+messages:
+      range: 9
+      sources:
+
+# default sdk.feature swagger and security.web to true
+
+# prevent token from being used for endpoint
+sdk.feature.security.token.endpoints.token: false
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: info,health,loggers,logfile
+
+---
+spring.config.activate.on-profile: https
+
+apiml:
+    service:
+        scheme: https
+
+server:
+    ssl:
+        enabled: true
+
+---
+spring.config.activate.on-profile: debug
+
+logging:
+    level:
+        ROOT: INFO
+        com.broadcom.restapi.sdk: DEBUG
+        org.springframework: INFO
+        org.apache.catalina: INFO
+        org.apache.juli.logging: INFO
+        com.netflix: INFO
+        org.zowe.apiml.eurekaservice.client.impl: INFO
+
+---
+spring.config.activate.on-profile: zos
+
+security.authentication: Press **Authorize** and use your mainframe credentials

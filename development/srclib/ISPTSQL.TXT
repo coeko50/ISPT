@@ -1,0 +1,643 @@
+     CREATE SCHEMA ISPT
+*+       DATE CREATED 2025-03-17-16.11.40.814689   BY ISPDC
+*+       FOR SQL
+         ;
+     CREATE VIEW ISPT.UDC
+*+       DATE CREATED 2025-05-30-00.55.01.312185   BY ISPDC
+*+       DATE LAST UPDATED 2025-05-30-00.55.01.312185   BY ISPDC
+       ( ENTITY, ID, UDC )
+         AS
+
+
+
+
+
+select  substr(d.attr_name_093,1,16) as entity, c.NEST_ID_132 as id
+ , b.attr_name_093 as udc
+from sysdict."CLASS-092" a
+join sysdict."ATTRIBUTE-093" b on "CLASS-ATTR".a.b
+join sysdict."ATTRNEST-132" c on "ATTR-IMPL".b.c
+join sysdict."ATTRIBUTE-093" d on "ATTR-EXPL".c.d
+join sysdict."CLASS-092" e on "CLASS-ATTR".d.e
+where a.CLASS_name_092 = 'USER DEFINED COMMENT'
+and e.class_name_092 = 'ENTITY'
+and b.attr_name_093 like 'ISPT%'
+
+
+
+
+*+       TIMESTAMP '2025-05-30-00.55.01.312185'
+         ;
+     CREATE VIEW ISPT.DIALOG_RESPONSES
+*+       DATE CREATED 2025-06-23-00.21.46.303485   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.303485   BY ISPDC
+       ( PROG_NAME, PROG_VER, MAP_NAME, MAP_VER, RESPONSE, MOD_NAME, MOD_DESC
+           )
+         AS
+
+
+
+
+select PROG_NAME_051,prog_ver_051,map_name_098, map_ver_098
+, replace(substr(JCT_TEXT_055,1,6),',',' ') response ,mod_name_067
+, descr_067
+from isptdict."PROG-051"
+join isptdict."PROGMAP-126"
+  on "PROG-PROGMAP"
+join isptdict."MAP-098"
+  on "MAP-PROGMAP"
+join isptdict."MODLST-055" ml
+  on "PROG-MODLST"
+join isptdict."MODULE-067"
+  on "MODULE-MODLST"
+where JCT_TEXT_055 not like 'INCLUDE%'
+
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.303485'
+         ;
+     CREATE VIEW ISPT.ENDPOINT
+*+       DATE CREATED 2025-06-23-00.21.46.343361   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.343361   BY ISPDC
+       ( KEY, VALUE )
+         AS
+
+
+
+select
+ trim(substr(CMT_INFO_084_1,5,32))  as key
+,trim(substr(concat(CMT_INFO_084_1,CMT_INFO_084_2),36,64)) as value
+from isptdict."MODULE-067"
+join isptdict."MODCMT-084"
+  on "MODULE-MODCMT"
+where
+    mod_name_067 = 'ENDPOINT'
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.343361'
+         ;
+     CREATE VIEW ISPT.JSONMAPPING_MODULE
+*+       DATE CREATED 2025-06-23-00.21.46.359379   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.359379   BY ISPDC
+       ( LOADHDR_MODNAME_156, LOADHDR_VERS_156, LOADTEXT_TEXT_157_01,
+           LOADTEXT_TEXT_157_02, LOADTEXT_TEXT_157_03, LOADTEXT_TEXT_157_04,
+           LOADTEXT_TEXT_157_05, LOADTEXT_TEXT_157_06, LOADTEXT_TEXT_157_07,
+           LOADTEXT_TEXT_157_08, LOADTEXT_TEXT_157_09, LOADTEXT_TEXT_157_10,
+           LOADTEXT_TEXT_157_11, LOADTEXT_TEXT_157_12, LOADTEXT_TEXT_157_13,
+           LOADTEXT_TEXT_157_14, LOADTEXT_TEXT_157_15, LOADTEXT_TEXT_157_16 )
+         AS
+
+
+select loadhdr_modname_156, loadhdr_vers_156
+    ,LOADTEXT_TEXT_157_01,LOADTEXT_TEXT_157_02
+    ,LOADTEXT_TEXT_157_03,LOADTEXT_TEXT_157_04
+    ,LOADTEXT_TEXT_157_05,LOADTEXT_TEXT_157_06
+    ,LOADTEXT_TEXT_157_07,LOADTEXT_TEXT_157_08
+    ,LOADTEXT_TEXT_157_09,LOADTEXT_TEXT_157_10
+    ,LOADTEXT_TEXT_157_11,LOADTEXT_TEXT_157_12
+    ,LOADTEXT_TEXT_157_13,LOADTEXT_TEXT_157_14
+    ,LOADTEXT_TEXT_157_15,LOADTEXT_TEXT_157_16
+
+from isptdict."LOADHDR-156" l
+  join isptdict."LOADTEXT-157" t
+    on "LOADHDR-LOADTEXT"
+
+*+       TIMESTAMP '2025-06-23-00.21.46.359379'
+         ;
+     CREATE VIEW ISPT.MAPFIELDS
+*+       DATE CREATED 2025-06-23-00.21.46.380158   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.380158   BY ISPDC
+       ( REC, RECVER, ELE, UPDATEABLE, REQUIRED, SEQ, LVL, PIC, MAP, MAPVER )
+         AS
+
+
+
+
+select
+   k.rsyn_name_079  as rec
+,  k.rsyn_ver_079  as recver
+,  i.es_name_085 as ele
+ , substr(sql.ifb(ATTR_FLAG_147,x'60','N','Y'),1,1) updateable
+ , substr(sql.ifb(MFLFLG1_124,x'40','Y','N'),1,1) required
+ , seq_042  as seq
+ , DR_LVL_042 AS LVL,TRIM(PIC_042) AS PIC
+
+ , map_name_098 map, map_ver_098 as mapver
+from isptdict."MAP-098"  a
+ join isptdict."MAPFLD-124" b
+   on "MAP-MAPFLD"
+  join isptdict."PANELFLD-121" pf
+     on "PANELFLD-MAPFLD".b.pf
+  join isptdict."PFLD-DATA-147" pd
+     on "PANELFLD-PFLD"
+  JOIN isptdict."NAMESYN-083"    H
+     ON "NAMESYN-MAPFLD".B.H
+  JOIN isptdict."ELEMSYN-085"    i
+     ON "ELEMSYN-NAMESYN".h.i
+  JOIN isptdict."SDR-042"       E
+     ON "SDR-NAMESYN".h.e
+  JOIN isptdict."RCDSYN-079"     K
+     ON "RCDSYN-NAMESYN".H.K
+where DR_LVL_042 <> 88
+
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.380158'
+         ;
+     CREATE VIEW ISPT.MAPRECORDS
+*+       DATE CREATED 2025-06-23-00.21.46.501928   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.501928   BY ISPDC
+       ( REC, RECVER, RECROWID, JSONREC, JSONVER, JSONROWID, MAP, MAPVER )
+         AS
+
+
+
+ select  e.RSYN_NAME_079  as rec
+    , e.rsyn_ver_079  as recver
+    , e.rowid         as recrowId
+    , f.RSYN_NAME_079  as jsonrec
+    , f.rsyn_ver_079  as jsonver
+    , f.rowid         as jsonrowid
+    , map_name_098 as map
+    , map_ver_098 as mapver
+ from isptdict."MAP-098"  a
+     join isptdict."MAPRCD-125" c
+       on "MAP-MAPRCD"
+     JOIN isptdict."RCDSYN-079"     E
+         ON "RCDSYN-MAPRCD".c.e
+ join isptdict."SR-036" g
+    on "SR-RCDSYN".e.g
+ JOIN isptdict."RCDSYN-079"     f
+    ON "SR-RCDSYN".g.f
+ join isptdict."RCDSYNATTR-141" L
+    on "RCDSYN-RCDSYNATT".f.l
+ join isptdict."ATTRIBUTE-093" M
+   on "ATTR-JCT".L.M
+   and attr_name_093 = 'JSON'
+ join isptdict."CLASS-092"  n
+  on "CLASS-ATTR"
+  and class_name_092 = 'LANGUAGE'
+
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.501928'
+         ;
+     CREATE VIEW ISPT.PROGRAM_CALLS
+*+       DATE CREATED 2025-06-23-00.21.46.568610   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.568610   BY ISPDC
+       ( PROG_NAME_051, PROG_VER_051, MAP_NAME_098, MAP_VER_098, RESPONSE,
+           MOD_NAME_067, SOURCE_088 )
+         AS
+
+
+
+select PROG_NAME_051,prog_ver_051
+,map_name_098 , map_ver_098
+, replace(substr(JCT_TEXT_055,1,6),',',' ') response ,mod_name_067,
+ source_088
+from isptdict."PROG-051"
+join isptdict."PROGMAP-126"
+  on "PROG-PROGMAP"
+join isptdict."MAP-098"
+  on "MAP-PROGMAP"
+join isptdict."MODLST-055" ml
+  on "PROG-MODLST"
+join isptdict."MODULE-067"
+  on "MODULE-MODLST"
+join isptdict."TEXT-088" t
+  on "MODULE-TEXT"
+where
+
+   (source_088 like '%INVOKE%'
+or ( source_088 like '%LINK%' and not ( source_088 like '%LR001UDC%'
+   or source_088 like '%LCM46D%'))
+or ( source_088 like '%TRANSFER%'))
+and not  substr(source_088,1,1) = '!'
+order by prog_name_051
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.568610'
+         ;
+     CREATE VIEW ISPT.PROGRAM_ENDPOINT
+*+       DATE CREATED 2025-06-23-00.21.46.598326   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.598326   BY ISPDC
+       ( PROG_NAME, PROG_VER, MAP_NAME, MAP_VER, RESPONSE, MOD_NAME )
+         AS
+
+
+
+select PROG_NAME_051,prog_ver_051,map_name_098, map_ver_098
+, replace(substr(JCT_TEXT_055,1,6),',',' ') response ,mod_name_067
+from isptdict."PROG-051"
+join isptdict."PROGMAP-126"
+  on "PROG-PROGMAP"
+join isptdict."MAP-098"
+  on "MAP-PROGMAP"
+join isptdict."MODLST-055" ml
+  on "PROG-MODLST"
+join isptdict."MODULE-067"
+  on "MODULE-MODLST"
+where JCT_TEXT_055 not like 'INCLUDE%'
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.598326'
+         ;
+     CREATE VIEW ISPT.PROGRAM_INFO
+*+       DATE CREATED 2025-06-23-00.21.46.621462   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.621462   BY ISPDC
+       ( PROG_NAME, PROG_VER, MAP_NAME, MAP_VER, JCT_TEXT, REC_NAME, REC_VER,
+           REC_DBKEY )
+         AS
+
+
+
+
+select    PROG_NAME_051, prog_ver_051
+        , MAP_NAME_098, map_ver_098
+        , JCT_TEXT_063, RSYN_NAME_079, rsyn_ver_079
+   , "RCDSYN-079".rowid
+from isptdict."PROG-051"
+join isptdict."PROGMAP-126"
+  on "PROG-PROGMAP"
+join isptdict."MAP-098"
+  on "MAP-PROGMAP"
+join isptdict."RCDCOPY-063"
+  on "PROG-RCDCOPY"
+join isptdict."RCDSYN-079"
+  on "RCDSYN-RCDCOPY"
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.621462'
+         ;
+     CREATE VIEW ISPT.PROGRAM_RECORDS
+*+       DATE CREATED 2025-06-23-00.21.46.647462   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.647462   BY ISPDC
+       ( PROG_NAME, PROG_VER, MAP_NAME, MAP_VER, REC_USAGE, REC_NAME, REC_VER,
+           REC_DBKEY )
+         AS
+
+
+
+
+
+
+select    PROG_NAME_051, prog_ver_051
+        , MAP_NAME_098, map_ver_098
+        , substr(JCT_TEXT_063,1,4), RSYN_NAME_079, rsyn_ver_079
+   , "RCDSYN-079".rowid
+from isptdict."PROG-051"
+join isptdict."PROGMAP-126"
+  on "PROG-PROGMAP"
+join isptdict."MAP-098"
+  on "MAP-PROGMAP"
+join isptdict."RCDCOPY-063"
+  on "PROG-RCDCOPY"
+join isptdict."RCDSYN-079"
+  on "RCDSYN-RCDCOPY"
+
+
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.647462'
+         ;
+     CREATE VIEW ISPT.RECELE_UDC
+*+       DATE CREATED 2025-06-23-00.21.46.677702   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.677702   BY ISPDC
+       ( UDC_KEY, UDC_VAL, ID, SDR_ROWID )
+         AS
+
+
+
+select udc udc_key,cmt_info_044_1 udc_val
+    ,cmt_id_044 as id  ,d.rowid as RECELE_ROWID
+from isptdict."SDR-042" d
+join isptdict."SDES-044" sd
+  on "SDR-SDES".d.sd
+join ispt.udc  u
+  on u.id = sd.cmt_id_044
+ and u.ENTITY = 'RECORD'
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.677702'
+         ;
+     CREATE VIEW ISPT.RECORD_INFO_OLD
+*+       DATE CREATED 2025-06-23-00.21.46.702666   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.702666   BY ISPDC
+       ( JSONREC, JRECVER, JSONFLD, REC, RECVER, ELE, SEQ, LVL, ISGRP, POS,
+           DTYPE, MODE, LEN, DLEN, PREC, SCALE, OCC, OCCDEPEND, OCCLVL,
+           REDEFLVL, REDEFELE, DESC, PREFIX, RECELE_ROWID )
+         AS
+
+
+
+
+select
+ f.rsyn_name_079 as jsonrec,  f.rsyn_ver_079 as jrecver
+ , replace(e.SYN_NAME_083,'-','_') as jsonfld
+ , a.rsyn_name_079 as rec , a.rsyn_ver_079 as recver
+ , c.syn_name_083 as ele
+ , d.seq_042 as seq
+ , d.DR_LVL_042 as lvl
+ , substr(sql.ifn(d.lenGTH_042 + d.precision_042 + d.use_042
+      , 0, 'Y','N'),1,1) as isGrp
+ , e.DR_LPOS_083 as pos
+ , d.dATA_TYPE_042 as dtype
+ , d.use_042 as mode
+ , d.lenGTH_042 as len
+ , d.DR_LGTH_042 as dlen
+ , d.PRECISION_042 as prec
+ , d.SCALE_042 as scale
+ , d.OCC_042 as occ
+ , c.DEPEND_ON_083  as occdepend
+ , OCC_LVL_042 as occlvl
+ , RDF_LVL_042 redeflvl
+ , e.RDF_NAM_083  as redefele
+ , trim(sql.ifl(substr(i.desc_058,1,6),' ',d.DR_NAM_042,i.desc_058)) as desc
+ , a.PREFIX_VAL_079  prefix
+ , d.rowid
+from   isptdict."RCDSYN-079"     a
+  JOIN isptdict."NAMESYN-083"    c
+     ON "RCDSYN-NAMESYN".a.c
+  join isptdict."SDR-042" d
+     on "SDR-NAMESYN".c.d
+  join isptdict."ELEMSYN-085" s
+     on "ELEMSYN-NAMESYN".c.s
+  join isptdict."INQ-058" i
+     on "INQ-ELEMSYN".s.i
+  join isptdict."SR-036" g
+     on "SR-SDR".d.g
+  join isptdict."NAMESYN-083" e
+     on "SDR-NAMESYN".d.e
+  JOIN isptdict."RCDSYN-079"     f
+     ON "RCDSYN-NAMESYN".e.f
+  join isptdict."RCDSYNATTR-141" L
+     on "RCDSYN-RCDSYNATT".f.l
+  join isptdict."ATTRIBUTE-093" M
+    on "ATTR-JCT".L.M
+    and attr_name_093 = 'JSON'
+  join isptdict."CLASS-092"  n
+   on "CLASS-ATTR"
+   and class_name_092 = 'LANGUAGE'
+
+
+
+
+*+       TIMESTAMP '2025-06-23-00.21.46.702666'
+         ;
+     CREATE VIEW ISPT.SDR_UDC
+*+       DATE CREATED 2025-06-23-00.21.46.930913   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.930913   BY ISPDC
+       ( UDC_ID, UDC_VAL, SDR_ROWID )
+         AS
+
+
+select  cmt_id_044, cmt_info_044_1
+    ,d.rowid
+from isptdict."SDR-042" d
+join isptdict."SDES-044" sd
+  on "SDR-SDES".d.sd
+where cmt_id_044 > 0
+
+*+       TIMESTAMP '2025-06-23-00.21.46.930913'
+         ;
+     CREATE VIEW ISPT.GENMFLDTESTDATA
+*+       DATE CREATED 2025-06-23-00.21.46.939983   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-23-00.21.46.939983   BY ISPDC
+       ( A, B, C, D, E, F, G, H, I, J, MAP, REC, SEQ )
+         AS
+
+
+select
+   ' mfld = new Mapfields();'
+  ,' mfld.setRec("' || trim(rec) || '") ;'
+  ,' mfld.setRecver(new Short("' || cast(recver as char(4)) || '"));'
+  ,' mfld.setEle("' || trim(ele) || '") ;'
+  ,' mfld.setSeq(new BigDecimal(' || cast(seq as char(4)) || ')); '
+  ,' mfld.setLvl(new BigDecimal(' || cast(seq as char(4)) || ')); '
+  ,' mfld.setPic("' || trim(pic) || '") ;'
+  ,' mfld.setUpdateable("' || updateable || '") ;'
+  ,' mfld.setRequired("' || required || '") ;'
+  ,' mapFields.add(mfld);'
+   , map,rec,seq
+  from ispt.mapfields
+
+*+       TIMESTAMP '2025-06-23-00.21.46.939983'
+         ;
+     CREATE VIEW ISPT.PROGRAM_MESSAGES
+*+       DATE CREATED 2025-07-17-11.27.47.063564   BY ISPDC
+*+       DATE LAST UPDATED 2025-07-17-11.27.47.063564   BY ISPDC
+       ( PROG_NAME_051, PROG_VER_051, MAP_NAME_098, MAP_VER_098, RESPONSE,
+           MOD_NAME_067, SOURCE_088 )
+         AS
+
+
+
+
+select PROG_NAME_051,prog_ver_051
+,map_name_098 , map_ver_098
+, replace(substr(JCT_TEXT_055,1,6),',',' ') response ,mod_name_067,
+ source_088
+from isptdict."PROG-051"
+join isptdict."PROGMAP-126"
+  on "PROG-PROGMAP"
+join isptdict."MAP-098"
+  on "MAP-PROGMAP"
+join isptdict."MODLST-055" ml
+  on "PROG-MODLST"
+join isptdict."MODULE-067"
+  on "MODULE-MODLST"
+join isptdict."TEXT-088" t
+  on "MODULE-TEXT"
+where
+
+    source_088 like '%DISPLAY%'
+and not  substr(source_088,1,1) = '!'
+order by prog_name_051
+
+
+
+*+       TIMESTAMP '2025-07-17-11.27.47.063564'
+         ;
+     CREATE TABLE PROCEDURE ISPT.RECORD_INF1
+*+       DATE CREATED 2025-06-04-20.20.04.995744   BY ISPDC
+*+       DATE LAST UPDATED 2025-06-04-20.20.04.995744   BY ISPDC
+       ( JSONREC                          CHARACTER(32),
+         JRECVER                          SMALLINT,
+         JSONFLD                          CHARACTER(32),
+         REC                              CHARACTER(32),
+         RECVER                           SMALLINT,
+         ELE                              CHARACTER(32),
+         SEQ                              INTEGER,
+         LVL                              SMALLINT,
+         ISGRP                            SMALLINT,
+         POS                              SMALLINT,
+         DTYPE                            SMALLINT,
+         MODE                             SMALLINT,
+         LEN                              SMALLINT,
+         DLEN                             SMALLINT,
+         PREC                             SMALLINT,
+         SCALE                            SMALLINT,
+         OCC                              SMALLINT,
+         OCCDEPEND                        CHARACTER(32),
+         OCCLVL                           SMALLINT,
+         REDEFLVL                         SMALLINT,
+         REDEFELE                         SMALLINT,
+         DESC                             CHARACTER(32),
+         PREFIX                           CHARACTER(8),
+         UDC_KEY                          CHARACTER(16),
+         UDC_VAL                          CHARACTER(16)
+       )
+         EXTERNAL NAME ISPTC001
+         DEFAULT DATABASE NULL
+         USER MODE
+         LOCAL WORK AREA 1024
+         GLOBAL WORK AREA 1024
+*+       TIMESTAMP '2025-06-04-20.20.04.995744'
+         ;
+     CREATE TABLE PROCEDURE ISPT.JSONSCHEMA
+*+       DATE CREATED 2025-08-30-00.29.52.453905   BY ISPDC
+*+       DATE LAST UPDATED 2025-08-30-00.29.52.453905   BY ISPDC
+       ( JSONMAP_NAME                     CHARACTER(8),
+         REC_COUNT                        SMALLINT,
+         SCH_ELE_COUNT                    SMALLINT,
+         SCH_ELE_OFFSET                   SMALLINT,
+         REC_NAME                         CHARACTER(32),
+         REC_VERSION                      SMALLINT,
+         JSONREC_NAME                     CHARACTER(32),
+         JSONREC_VER                      SMALLINT,
+         ELE_COUNT                        SMALLINT,
+         REC_CHILDCNT                     SMALLINT,
+         REC_ELE_OFFSET                   SMALLINT,
+         PARENT_OFFSET                    SMALLINT,
+         NEXT_OFFSET                      SMALLINT,
+         FSTCHILD_OFFSET                  SMALLINT,
+         JSONFLD                          CHARACTER(32),
+         ELE_LVL                          SMALLINT,
+         ELE_ELEMENT                      CHARACTER(32),
+         ELE_IX                           SMALLINT,
+         ELE_SEQ                          SMALLINT,
+         ELE_CHILDCNT                     SMALLINT,
+         ELE_OFFSET                       SMALLINT,
+         ELE_LEN                          SMALLINT,
+         ELE_DLEN                         SMALLINT,
+         ELE_OCC                          SMALLINT,
+         ELE_OCC_OFFSET                   SMALLINT,
+         ELE_OCC_DEPEND_IND               CHARACTER(1),
+         ELE_PARENT_TYPE                  CHARACTER(1),
+         ELE_OCC_DEPEND_OFFSET            SMALLINT,
+         ELE_OCCLVL                       SMALLINT,
+         ELE_OCCSIZE_1                    SMALLINT,
+         ELE_OCCSIZE_2                    SMALLINT,
+         ELE_ISGROUPELE                   CHARACTER(1),
+         ELE_ISSEL4OUPUT                  CHARACTER(1),
+         ELE_ISUPDATEABLE                 CHARACTER(1),
+         ELE_ISJSONREQUIRED               CHARACTER(1),
+         ELE_DTYPE                        SMALLINT,
+         ELE_USAGE                        SMALLINT,
+         ELE_PREC                         SMALLINT,
+         ELE_SCALE                        SMALLINT,
+         ELE_UDC_KEY                      SMALLINT,
+         FUNC                             CHARACTER(1)
+       )
+         EXTERNAL NAME ISPTC003
+         DEFAULT DATABASE NULL
+         ESTIMATED ROWS 60
+         ESTIMATED IOS 150
+         USER MODE
+         LOCAL WORK AREA 16
+         GLOBAL WORK AREA 32760
+*+       TIMESTAMP '2025-08-30-00.29.52.469529'
+*+       KEY ISPTC003_KEY ON ( JSONMAP_NAME )
+         ;
+     CREATE TABLE PROCEDURE ISPT.RECORD_INFO
+*+       DATE CREATED 2025-09-09-16.06.22.098975   BY ISPDC
+*+       DATE LAST UPDATED 2025-09-09-16.06.22.098975   BY ISPDC
+       ( PARENT_SEQ                       SMALLINT,
+         NEXT_SEQ                         SMALLINT,
+         FSTCHILD_SEQ                     SMALLINT,
+         JSONREC                          CHARACTER(32),
+         JRECVER                          SMALLINT,
+         REC                              CHARACTER(32),
+         RECVER                           SMALLINT,
+         JSONFLD                          CHARACTER(32),
+         ELE                              CHARACTER(32),
+         SEQ                              INTEGER,
+         LVL                              SMALLINT,
+         ISGRP                            CHARACTER(1),
+         ISMAPFLD                         CHARACTER(1),
+         ISREQ                            CHARACTER(1),
+         ISUPD                            CHARACTER(1),
+         POS                              SMALLINT,
+         ELEPIC                           CHARACTER(8),
+         DTYPE                            SMALLINT,
+         MODE                             SMALLINT,
+         LEN                              SMALLINT,
+         DLEN                             SMALLINT,
+         PREC                             SMALLINT,
+         SCALE                            SMALLINT,
+         OCC                              SMALLINT,
+         OCCDEPEND_SEQ                    SMALLINT,
+         OCCLVL                           SMALLINT,
+         REDEFLVL                         SMALLINT,
+         REDEFELE_SEQ                     SMALLINT,
+         DESC                             CHARACTER(32),
+         PREFIX                           CHARACTER(8),
+         UDC_KEY                          SMALLINT,
+         UDC_VAL                          CHARACTER(16),
+         MAPLIST                          CHARACTER(40)
+       )
+         EXTERNAL NAME ISPTC001
+         DEFAULT DATABASE NULL
+         ESTIMATED ROWS 60
+         ESTIMATED IOS 150
+         USER MODE
+         LOCAL WORK AREA 16
+         GLOBAL WORK AREA 4096
+*+       TIMESTAMP '2025-09-09-16.06.22.098975'
+         ;
+     CREATE FUNCTION ISPT.TABLE_KEY
+*+       DATE CREATED 2025-05-24-11.06.22.363162   BY ISPDC
+*+       DATE LAST UPDATED 2025-05-24-11.06.22.363162   BY ISPDC
+       ( CMT_TEXT_1                       CHARACTER(50)
+       )
+         RETURNS VARCHAR(32)
+         EXTERNAL NAME ISPTDTBK
+         PROTOCOL ADS
+         DEFAULT DATABASE NULL
+         SYSTEM MODE
+         LOCAL WORK AREA 1024
+*+       TIMESTAMP '2025-05-24-11.06.22.363162'
+         ;
+     CREATE FUNCTION ISPT.TABLE_VAL
+*+       DATE CREATED 2025-05-24-11.07.16.747471   BY ISPDC
+*+       DATE LAST UPDATED 2025-05-24-11.07.16.747471   BY ISPDC
+       ( CMT_TEXT_1                       CHARACTER(50),
+         CMT_TEXT_2                       CHARACTER(50)
+       )
+         RETURNS VARCHAR(64)
+         EXTERNAL NAME ISPTDTBV
+         PROTOCOL ADS
+         DEFAULT DATABASE NULL
+         SYSTEM MODE
+         LOCAL WORK AREA 1024
+*+       TIMESTAMP '2025-05-24-11.07.16.747471'
+         ;
+     CREATE KEY ISPTC003_KEY
+         ON ISPT.JSONSCHEMA
+*+       DATE CREATED 2025-08-30-00.29.52.469529
+             (   JSONMAP_NAME )
+         ;
+     CREATE SCHEMA ISPTDICT
+*+       DATE CREATED 2025-06-23-00.08.54.179890   BY ISPDC
+*+       DATE LAST UPDATED 2025-10-09-13.33.09.741645   BY ISPDC
+         FOR NONSQL SCHEMA SYSDIRL.IDMSNTWK VERSION 1
+             DBNAME APPLDICT
+         WITH VIRTUAL KEYS
+         ;

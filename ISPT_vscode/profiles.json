@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Database Metadata Service – 1",
+         "url": "https://192.168.24.227:10014/api/v1/"
+    },
+    {
+        "name": "Database Metadata Service – 2",
+        "url": "https://server2.com:12346/api/v1/"
+    },
+    {
+        "name": "Database Metadata Service – 3",
+        "url": "https://server3.com:12347/api/v1/"
+    }      
+]

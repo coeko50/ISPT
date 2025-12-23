@@ -1,0 +1,15 @@
+ext {
+    broadcomRestApiSdkVersion = "2.8.3"
+    grgitVersion = "4.1.1"
+    springBootPluginVersion = "2.7.18"
+    springBootVersion = "2.7.20.3"
+    dbapiCommonVersion = '1.0.1-0017'
+//
+    libraries = [
+        springBootStarterSecurity           : "org.springframework.boot:spring-boot-starter-security",
+    ]
+//
+    libraries.springImplementation = [
+        libraries.springBootStarterSecurity,
+    ]
+}

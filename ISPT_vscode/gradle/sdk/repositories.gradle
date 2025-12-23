@@ -1,0 +1,20 @@
+ext {
+    
+    dbapiCommonGroup   = 'com.broadcom.dbapi'
+    // Define attributes to include in all JARs in MANIFEST.MF
+    manifestAttributes = [
+        //*******************************************************************//
+        // Developers may wish to change these attributes to fit their needs //
+        "Product-Title": "Database API Sample Project", // Title of JAR      //
+        "Product-Owner": "Broadcom Inc.",               // Owner of JAR      //
+        //*******************************************************************//
+        "Product-Version": "${project.version}",    // From 'version' in gradle.properties
+        "DBAPI-Common-Version": dbapiCommonVersion, // From dbapiCommonVersion in versions.gradle
+        "Zowe-SDK-Version": broadcomRestApiSdkVersion
+    ]
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}

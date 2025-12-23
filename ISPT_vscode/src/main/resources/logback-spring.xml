@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <turboFilter class="com.broadcom.restapi.sdk.apiml.ApimlIntegrationFailureDetector"/>
+    <turboFilter class="com.broadcom.restapi.sdk.logger.UseridFilter"/>
+    <turboFilter class="com.broadcom.restapi.sdk.logger.ZosFilter"/>
+
+    <turboFilter
+            class="ch.qos.logback.classic.turbo.DuplicateMessageFilter">
+        <AllowedRepetitions>100</AllowedRepetitions>
+    </turboFilter>
+
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+
+    <springProperty name="fileEnabled" source="logging.file.enabled" defaultValue="false"/>
+
+    <if condition='Boolean.valueOf(p("fileEnabled"))'>
+    <then>
+      <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+          <evaluator>
+            <expression>return (level &lt; WARN) &amp;&amp;
+              !logger.startsWith("com.broadcom.restapi.sdk.lifecycle.");</expression>
+            </evaluator>
+            <OnMatch>DENY</OnMatch>
+            <OnMismatch>NEUTRAL</OnMismatch>
+        </filter>
+        <encoder class="com.broadcom.restapi.sdk.logger.LoggerEncoder">
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %clr(&lt;%X{jobname:-}:%thread:${PID:-}&gt;){magenta} %X{userid:-} %clr(\(%logger:%line\)){cyan} %clr(%level) %replace(%msg){'[\n\r]','_'}%n
+            </pattern>
+        </encoder>
+            </appender>
+
+            <springProperty name="fileName" source="logging.file.name" defaultValue="log/api.log"/>
+            <springProperty name="filePattern" source="logging.file.pattern" defaultValue="log/api.%d{yyyy-MM-dd}.log"/>
+            <springProperty name="maxHistory" source="logging.file.maxHistory" defaultValue="30"/>
+            <springProperty name="totalSizeCap" source="logging.file.totalSizeCap" defaultValue="3GB"/>
+
+            <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>${fileName}</file>
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                    <fileNamePattern>${filePattern}</fileNamePattern>
+                    <maxHistory>${maxHistory}</maxHistory>
+                    <totalSizeCap>${totalSizeCap}</totalSizeCap>
+                </rollingPolicy>
+                <encoder class="com.broadcom.restapi.sdk.logger.LoggerEncoder">
+                    <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(&lt;%X{jobname:-}:%thread:${PID:-}&gt;){magenta} %X{userid:-} %clr(\(%logger:%line\)){cyan} %clr(%level) %replace(%msg){'[\n\r]','_'}%n
+                    </pattern>
+                </encoder>
+            </appender>
+
+            <root level="INFO">
+                <appender-ref ref="FILE"/>
+                <appender-ref ref="STDOUT"/>
+            </root>
+        </then>
+        <else>
+            <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+                <encoder class="com.broadcom.restapi.sdk.logger.LoggerEncoder">
+                    <pattern>
+                        %d{yyyy-MM-dd HH:mm:ss.SSS} %clr(&lt;%X{jobname:-}:%thread:${PID:-}&gt;){magenta} %X{userid:-} %clr(\(%logger:%line\)){cyan} %clr(%level) %replace(%msg){'[\n\r]','_'}%n
+                    </pattern>
+                </encoder>
+            </appender>
+
+            <root level="INFO">
+                <appender-ref ref="STDOUT"/>
+            </root>
+        </else>
+    </if>
+
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.springframework.transaction" level="WARN"/>
+
+    <!-- in order to debug some marshalling issues, this needs to be TRACE -->
+    <logger name="org.springframework.web.servlet.mvc" level="WARN"/>
+
+</configuration>

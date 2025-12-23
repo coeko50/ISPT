@@ -1,0 +1,689 @@
+ { "ISPT-JSONSCHEMA" : {
+   "type": "object",
+   "properties": { 
+    "W-SCHEMA-NAME" : {
+       "description": "SCHEMA-NAME",
+       "element": "W-SCHEMA-NAME",
+       "seq": 200,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :8
+       1}
+       6}
+    ,"W-REC-COUNT" : {
+       "description": "REC-COUNT",
+       "element": "W-REC-COUNT",
+       "seq": 300,
+       "relativeOffset": 8,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-SCH-ELE-COUNT" : {
+       "description": "SCH-ELE-COUNT",
+       "element": "W-SCH-ELE-COUNT",
+       "seq": 400,
+       "relativeOffset": 10,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-SCH-ELE-OFFSET" : {
+       "description": "SCH-ELE-OFFSET",
+       "element": "W-SCH-ELE-OFFSET",
+       "seq": 500,
+       "relativeOffset": 12,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+       1}
+     "type" : "array" , "maxContains":5, "items": {
+        "type" : "object", "properties": {
+    "W-REC-NAME" : {
+       "description": "REC-NAME",
+       "element": "W-REC-NAME",
+       "seq": 700,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :32
+       1}
+       6}
+    ,"W-REC-VERSION" : {
+       "description": "REC-VERSION",
+       "element": "W-REC-VERSION",
+       "seq": 800,
+       "relativeOffset": 32,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-ELE-COUNT" : {
+       "description": "ELE-COUNT",
+       "element": "W-ELE-COUNT",
+       "seq": 900,
+       "relativeOffset": 34,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-REC-CHILDCNT" : {
+       "description": "REC-CHILDCNT",
+       "element": "W-REC-CHILDCNT",
+       "seq": 1000,
+       "relativeOffset": 36,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-REC-ELE-OFFSET" : {
+       "description": "REC-ELE-OFFSET",
+       "element": "W-REC-ELE-OFFSET",
+       "seq": 1100,
+       "relativeOffset": 38,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+       1}
+     4}
+     5}
+    "W-REC-NAME" : {
+       "description": "REC-NAME",
+       "element": "W-REC-NAME",
+       "seq": 700,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :32
+       1}
+       6}
+    ,"W-REC-VERSION" : {
+       "description": "REC-VERSION",
+       "element": "W-REC-VERSION",
+       "seq": 800,
+       "relativeOffset": 32,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-ELE-COUNT" : {
+       "description": "ELE-COUNT",
+       "element": "W-ELE-COUNT",
+       "seq": 900,
+       "relativeOffset": 34,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-REC-CHILDCNT" : {
+       "description": "REC-CHILDCNT",
+       "element": "W-REC-CHILDCNT",
+       "seq": 1000,
+       "relativeOffset": 36,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+    ,"W-REC-ELE-OFFSET" : {
+       "description": "REC-ELE-OFFSET",
+       "element": "W-REC-ELE-OFFSET",
+       "seq": 1100,
+       "relativeOffset": 38,
+       "lvl": 3,
+       "type" : integer, "maximum" :32768
+       1}
+       6}
+       1}
+     6}
+     1}
+     "type" : "array" , "maxContains":150, "items": {
+        "type" : "object", "properties": {
+      "W-PARENT-OFFSET" : {
+         "description": "PARENT-OFFSET",
+         "element": "W-PARENT-OFFSET",
+         "seq": 1400,
+         "relativeOffset": 0,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-NEXT-OFFSET" : {
+         "description": "NEXT-OFFSET",
+         "element": "W-NEXT-OFFSET",
+         "seq": 1500,
+         "relativeOffset": 2,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-1STCHILD-OFFSET" : {
+         "description": "1STCHILD-OFFSET",
+         "element": "W-1STCHILD-OFFSET",
+         "seq": 1600,
+         "relativeOffset": 4,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+         1}
+       6}
+      "W-JSONFLD" : {
+         "description": "JSONFLD",
+         "element": "W-JSONFLD",
+         "seq": 1800,
+         "relativeOffset": 6,
+         "lvl": 4,
+         "type" : "string", "maxLength" :32
+         1}
+         6}
+      ,"W-ELE-LVL" : {
+         "description": "ELE-LVL",
+         "element": "W-ELE-LVL",
+         "seq": 1900,
+         "relativeOffset": 38,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-ELEMENT" : {
+         "description": "ELE-ELEMENT",
+         "element": "W-ELE-ELEMENT",
+         "seq": 2000,
+         "relativeOffset": 40,
+         "lvl": 4,
+         "type" : "string", "maxLength" :32
+         1}
+         6}
+      ,"W-ELE-SEQ" : {
+         "description": "ELE-SEQ",
+         "element": "W-ELE-SEQ",
+         "seq": 2100,
+         "relativeOffset": 72,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-CHILDCNT" : {
+         "description": "ELE-CHILDCNT",
+         "element": "W-ELE-CHILDCNT",
+         "seq": 2200,
+         "relativeOffset": 74,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OFFSET" : {
+         "description": "ELE-OFFSET",
+         "element": "W-ELE-OFFSET",
+         "seq": 2300,
+         "relativeOffset": 76,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-LEN" : {
+         "description": "ELE-LEN",
+         "element": "W-ELE-LEN",
+         "seq": 2400,
+         "relativeOffset": 78,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-DLEN" : {
+         "description": "ELE-DLEN",
+         "element": "W-ELE-DLEN",
+         "seq": 2500,
+         "relativeOffset": 80,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCC" : {
+         "description": "ELE-OCC",
+         "element": "W-ELE-OCC",
+         "seq": 2600,
+         "relativeOffset": 82,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCC-OFFSET" : {
+         "description": "ELE-OCC-OFFSET",
+         "element": "W-ELE-OCC-OFFSET",
+         "seq": 2700,
+         "relativeOffset": 84,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCC-DEPEND-IND" : {
+         "description": "ELE-OCC-DEPEND-IND",
+         "element": "W-ELE-OCC-DEPEND-IND",
+         "seq": 2800,
+         "relativeOffset": 86,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-PARENT-TYPE" : {
+         "description": "ELE-PARENT-TYPE",
+         "element": "W-ELE-PARENT-TYPE",
+         "seq": 2900,
+         "relativeOffset": 87,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-OCC-DEPEND-OFFSET" : {
+         "description": "ELE-OCC-DEPEND-OFFSET",
+         "element": "W-ELE-OCC-DEPEND-OFFSET",
+         "seq": 3000,
+         "relativeOffset": 88,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCCLVL" : {
+         "description": "ELE-OCCLVL",
+         "element": "W-ELE-OCCLVL",
+         "seq": 3100,
+         "relativeOffset": 90,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+         "type" : "array" , "maxContains":2, "items": {
+            "type" : "object", "properties": {
+      ,"W-ELE-OCCSIZE" : {
+         "description": "ELE-OCCSIZE",
+         "element": "W-ELE-OCCSIZE",
+         "seq": 3200,
+         "relativeOffset": 92,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         4}
+         5}
+      "W-ELE-OCCSIZE" : {
+         "description": "ELE-OCCSIZE",
+         "element": "W-ELE-OCCSIZE",
+         "seq": 3200,
+         "relativeOffset": 92,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+         1}
+         6}
+      ,"W-ELE-ISGROUPELE" : {
+         "description": "ELE-ISGROUPELE",
+         "element": "W-ELE-ISGROUPELE",
+         "seq": 3300,
+         "relativeOffset": 96,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-ISSEL4OUPUT" : {
+         "description": "ELE-ISSEL4OUPUT",
+         "element": "W-ELE-ISSEL4OUPUT",
+         "seq": 3400,
+         "relativeOffset": 97,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-ISUPDATEABLE" : {
+         "description": "ELE-ISUPDATEABLE",
+         "element": "W-ELE-ISUPDATEABLE",
+         "seq": 3500,
+         "relativeOffset": 98,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-ISJSONREQUIRED" : {
+         "description": "ELE-ISJSONREQUIRED",
+         "element": "W-ELE-ISJSONREQUIRED",
+         "seq": 3600,
+         "relativeOffset": 99,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-DTYPE" : {
+         "description": "ELE-DTYPE",
+         "element": "W-ELE-DTYPE",
+         "seq": 3700,
+         "relativeOffset": 100,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-USAGE" : {
+         "description": "ELE-USAGE",
+         "element": "W-ELE-USAGE",
+         "seq": 3800,
+         "relativeOffset": 102,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-PREC" : {
+         "description": "ELE-PREC",
+         "element": "W-ELE-PREC",
+         "seq": 3900,
+         "relativeOffset": 104,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-SCALE" : {
+         "description": "ELE-SCALE",
+         "element": "W-ELE-SCALE",
+         "seq": 4000,
+         "relativeOffset": 106,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-UDC-KEY" : {
+         "description": "ELE-UDC-KEY",
+         "element": "W-ELE-UDC-KEY",
+         "seq": 4100,
+         "relativeOffset": 108,
+         "lvl": 4,
+         "type" : "string", "maxLength" :16
+         1}
+         6}
+      ,"W-ELE-UDC-VAL" : {
+         "description": "ELE-UDC-VAL",
+         "element": "W-ELE-UDC-VAL",
+         "seq": 4200,
+         "relativeOffset": 124,
+         "lvl": 4,
+         "type" : "string", "maxLength" :16
+         1}
+         6}
+         1}
+       6}
+       1}
+     4}
+     5}
+      "W-PARENT-OFFSET" : {
+         "description": "PARENT-OFFSET",
+         "element": "W-PARENT-OFFSET",
+         "seq": 1400,
+         "relativeOffset": 0,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-NEXT-OFFSET" : {
+         "description": "NEXT-OFFSET",
+         "element": "W-NEXT-OFFSET",
+         "seq": 1500,
+         "relativeOffset": 2,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-1STCHILD-OFFSET" : {
+         "description": "1STCHILD-OFFSET",
+         "element": "W-1STCHILD-OFFSET",
+         "seq": 1600,
+         "relativeOffset": 4,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+         1}
+       6}
+      "W-JSONFLD" : {
+         "description": "JSONFLD",
+         "element": "W-JSONFLD",
+         "seq": 1800,
+         "relativeOffset": 6,
+         "lvl": 4,
+         "type" : "string", "maxLength" :32
+         1}
+         6}
+      ,"W-ELE-LVL" : {
+         "description": "ELE-LVL",
+         "element": "W-ELE-LVL",
+         "seq": 1900,
+         "relativeOffset": 38,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-ELEMENT" : {
+         "description": "ELE-ELEMENT",
+         "element": "W-ELE-ELEMENT",
+         "seq": 2000,
+         "relativeOffset": 40,
+         "lvl": 4,
+         "type" : "string", "maxLength" :32
+         1}
+         6}
+      ,"W-ELE-SEQ" : {
+         "description": "ELE-SEQ",
+         "element": "W-ELE-SEQ",
+         "seq": 2100,
+         "relativeOffset": 72,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-CHILDCNT" : {
+         "description": "ELE-CHILDCNT",
+         "element": "W-ELE-CHILDCNT",
+         "seq": 2200,
+         "relativeOffset": 74,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OFFSET" : {
+         "description": "ELE-OFFSET",
+         "element": "W-ELE-OFFSET",
+         "seq": 2300,
+         "relativeOffset": 76,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-LEN" : {
+         "description": "ELE-LEN",
+         "element": "W-ELE-LEN",
+         "seq": 2400,
+         "relativeOffset": 78,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-DLEN" : {
+         "description": "ELE-DLEN",
+         "element": "W-ELE-DLEN",
+         "seq": 2500,
+         "relativeOffset": 80,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCC" : {
+         "description": "ELE-OCC",
+         "element": "W-ELE-OCC",
+         "seq": 2600,
+         "relativeOffset": 82,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCC-OFFSET" : {
+         "description": "ELE-OCC-OFFSET",
+         "element": "W-ELE-OCC-OFFSET",
+         "seq": 2700,
+         "relativeOffset": 84,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCC-DEPEND-IND" : {
+         "description": "ELE-OCC-DEPEND-IND",
+         "element": "W-ELE-OCC-DEPEND-IND",
+         "seq": 2800,
+         "relativeOffset": 86,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-PARENT-TYPE" : {
+         "description": "ELE-PARENT-TYPE",
+         "element": "W-ELE-PARENT-TYPE",
+         "seq": 2900,
+         "relativeOffset": 87,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-OCC-DEPEND-OFFSET" : {
+         "description": "ELE-OCC-DEPEND-OFFSET",
+         "element": "W-ELE-OCC-DEPEND-OFFSET",
+         "seq": 3000,
+         "relativeOffset": 88,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-OCCLVL" : {
+         "description": "ELE-OCCLVL",
+         "element": "W-ELE-OCCLVL",
+         "seq": 3100,
+         "relativeOffset": 90,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+         "type" : "array" , "maxContains":2, "items": {
+            "type" : "object", "properties": {
+      ,"W-ELE-OCCSIZE" : {
+         "description": "ELE-OCCSIZE",
+         "element": "W-ELE-OCCSIZE",
+         "seq": 3200,
+         "relativeOffset": 92,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         4}
+         5}
+      "W-ELE-OCCSIZE" : {
+         "description": "ELE-OCCSIZE",
+         "element": "W-ELE-OCCSIZE",
+         "seq": 3200,
+         "relativeOffset": 92,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+         1}
+         6}
+      ,"W-ELE-ISGROUPELE" : {
+         "description": "ELE-ISGROUPELE",
+         "element": "W-ELE-ISGROUPELE",
+         "seq": 3300,
+         "relativeOffset": 96,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-ISSEL4OUPUT" : {
+         "description": "ELE-ISSEL4OUPUT",
+         "element": "W-ELE-ISSEL4OUPUT",
+         "seq": 3400,
+         "relativeOffset": 97,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-ISUPDATEABLE" : {
+         "description": "ELE-ISUPDATEABLE",
+         "element": "W-ELE-ISUPDATEABLE",
+         "seq": 3500,
+         "relativeOffset": 98,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-ISJSONREQUIRED" : {
+         "description": "ELE-ISJSONREQUIRED",
+         "element": "W-ELE-ISJSONREQUIRED",
+         "seq": 3600,
+         "relativeOffset": 99,
+         "lvl": 4,
+         "type" : "string", "maxLength" :1
+         1}
+         6}
+      ,"W-ELE-DTYPE" : {
+         "description": "ELE-DTYPE",
+         "element": "W-ELE-DTYPE",
+         "seq": 3700,
+         "relativeOffset": 100,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-USAGE" : {
+         "description": "ELE-USAGE",
+         "element": "W-ELE-USAGE",
+         "seq": 3800,
+         "relativeOffset": 102,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-PREC" : {
+         "description": "ELE-PREC",
+         "element": "W-ELE-PREC",
+         "seq": 3900,
+         "relativeOffset": 104,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-SCALE" : {
+         "description": "ELE-SCALE",
+         "element": "W-ELE-SCALE",
+         "seq": 4000,
+         "relativeOffset": 106,
+         "lvl": 4,
+         "type" : integer, "maximum" :32768
+         1}
+         6}
+      ,"W-ELE-UDC-KEY" : {
+         "description": "ELE-UDC-KEY",
+         "element": "W-ELE-UDC-KEY",
+         "seq": 4100,
+         "relativeOffset": 108,
+         "lvl": 4,
+         "type" : "string", "maxLength" :16
+         1}
+         6}
+      ,"W-ELE-UDC-VAL" : {
+         "description": "ELE-UDC-VAL",
+         "element": "W-ELE-UDC-VAL",
+         "seq": 4200,
+         "relativeOffset": 124,
+         "lvl": 4,
+         "type" : "string", "maxLength" :16
+         1}
+         6}
+         1}
+       6}
+       1}
+     6}
+     1}
+    }
+  }
+}

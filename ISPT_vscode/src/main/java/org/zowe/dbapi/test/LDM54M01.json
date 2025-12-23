@@ -1,0 +1,548 @@
+  "LDM54WM1" : {
+   "type": "object",
+   "properties": { 
+  "LDM54WM1-USER-ORGNZTN" : {
+     "description": "ORGANIZATION CODE",
+     "element": "LDM54WM1-USER-ORGNZTN",
+     "seq": 100,
+     "relativeOffset": 0,
+     "lvl": 2,
+     "type" : "string", "maxLength" :8
+     1}
+  "LDM54WM1-JOB-STD-NR" : {
+     "description": "JOB STANDARD NUMBER",
+     "element": "LDM54WM1-JOB-STD-NR",
+     "seq": 200,
+     "relativeOffset": 8,
+     "lvl": 2,
+     "type" : "string", "maxLength" :5
+     1}
+  "LDM54WM1-JOB-STD-DSCRPTN" : {
+     "description": "JOB STANDARD DESCRIPTION",
+     "element": "LDM54WM1-JOB-STD-DSCRPTN",
+     "seq": 300,
+     "relativeOffset": 13,
+     "lvl": 2,
+     "type" : "string", "maxLength" :50
+     1}
+  "LDM54WM1-TYPE-MAINT-CODE" : {
+     "description": "TYPE MAINTENANCE CODE",
+     "element": "LDM54WM1-TYPE-MAINT-CODE",
+     "seq": 400,
+     "relativeOffset": 63,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-JOB-DSGNTR-CODE" : {
+     "description": "JOB DESIGNATOR CODE",
+     "element": "LDM54WM1-JOB-DSGNTR-CODE",
+     "seq": 500,
+     "relativeOffset": 64,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-LVL-MAINT" : {
+     "description": "LEVEL OF MAINTENANCE",
+     "element": "LDM54WM1-LVL-MAINT",
+     "seq": 600,
+     "relativeOffset": 65,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-TCTO-NR" : {
+     "description": "TCTO NUMBER",
+     "element": "LDM54WM1-TCTO-NR",
+     "seq": 700,
+     "relativeOffset": 66,
+     "lvl": 2,
+     "type" : "string", "maxLength" :25
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-OPRTG-INTVL-CODE" : {
+     "description": "OPERATING INTERVAL CODE",
+     "element": "LDM54WM1-OPRTG-INTVL-CODE",
+     "seq": 800,
+     "relativeOffset": 91,
+     "lvl": 2,
+     "type" : "string", "maxLength" :2
+     1}
+     4}
+     5}
+  "LDM54WM1-OPRTG-INTVL-CODE" : {
+     "description": "OPERATING INTERVAL CODE",
+     "element": "LDM54WM1-OPRTG-INTVL-CODE",
+     "seq": 800,
+     "relativeOffset": 91,
+     "lvl": 2,
+     "type" : "string", "maxLength" :2
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-OPRTG-INTVL-BASE-VAL" : {
+     "description": "OPERATING INTERVAL BASE VALUE",
+     "element": "LDM54WM1-OPRTG-INTVL-BASE-VAL",
+     "seq": 900,
+     "relativeOffset": 95,
+     "lvl": 2,
+     "type" : "numberic", "maximum" :9999999
+     1}
+     4}
+     5}
+  "LDM54WM1-OPRTG-INTVL-BASE-VAL" : {
+     "description": "OPERATING INTERVAL BASE VALUE",
+     "element": "LDM54WM1-OPRTG-INTVL-BASE-VAL",
+     "seq": 900,
+     "relativeOffset": 95,
+     "lvl": 2,
+     "type" : "numberic", "maximum" :9999999
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-BASE-VAL-LW-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-BASE-VAL-LW-TOLR",
+     "seq": 1000,
+     "relativeOffset": 105,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     4}
+     5}
+  "LDM54WM1-BASE-VAL-LW-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-BASE-VAL-LW-TOLR",
+     "seq": 1000,
+     "relativeOffset": 105,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-BASE-VAL-UP-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-BASE-VAL-UP-TOLR",
+     "seq": 1100,
+     "relativeOffset": 109,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     4}
+     5}
+  "LDM54WM1-BASE-VAL-UP-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-BASE-VAL-UP-TOLR",
+     "seq": 1100,
+     "relativeOffset": 109,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-INTVL-FREQ" : {
+     "description": "INTERVAL FREQUENCY",
+     "element": "LDM54WM1-INTVL-FREQ",
+     "seq": 1200,
+     "relativeOffset": 113,
+     "lvl": 2,
+     "type" : "numberic", "maximum" :9999999
+     1}
+     4}
+     5}
+  "LDM54WM1-INTVL-FREQ" : {
+     "description": "INTERVAL FREQUENCY",
+     "element": "LDM54WM1-INTVL-FREQ",
+     "seq": 1200,
+     "relativeOffset": 113,
+     "lvl": 2,
+     "type" : "numberic", "maximum" :9999999
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-FREQ-LW-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-FREQ-LW-TOLR",
+     "seq": 1300,
+     "relativeOffset": 123,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     4}
+     5}
+  "LDM54WM1-FREQ-LW-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-FREQ-LW-TOLR",
+     "seq": 1300,
+     "relativeOffset": 123,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-FREQ-UP-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-FREQ-UP-TOLR",
+     "seq": 1400,
+     "relativeOffset": 127,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     4}
+     5}
+  "LDM54WM1-FREQ-UP-TOLR" : {
+     "description": "CALENDAR DAY",
+     "element": "LDM54WM1-FREQ-UP-TOLR",
+     "seq": 1400,
+     "relativeOffset": 127,
+     "lvl": 2,
+     "type" : integer, "maximum" :2
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":2, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-BAS-FOR-ALGOR" : {
+     "description": "BASIS FOR ALGORITHM",
+     "element": "LDM54WM1-BAS-FOR-ALGOR",
+     "seq": 1500,
+     "relativeOffset": 131,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+     4}
+     5}
+  "LDM54WM1-BAS-FOR-ALGOR" : {
+     "description": "BASIS FOR ALGORITHM",
+     "element": "LDM54WM1-BAS-FOR-ALGOR",
+     "seq": 1500,
+     "relativeOffset": 131,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":5, "items": {
+        "type" : "object", "properties": {
+    "LDM54WM1-EQPMT-CLASS-CODE" : {
+       "description": "EQUIPMENT CLASS CODE",
+       "element": "LDM54WM1-EQPMT-CLASS-CODE",
+       "seq": 1700,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :1
+       1}
+       6}
+          "oneOf": [ 
+        { "$ref": "#/$defs/EQPMT_SUB_CLASS_BRKDN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_AIRCFT" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_MSL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_ENGN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_OPTNL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GSE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_PME" }
+       ]
+       6}
+       1}
+     4}
+     5}
+    "LDM54WM1-EQPMT-CLASS-CODE" : {
+       "description": "EQUIPMENT CLASS CODE",
+       "element": "LDM54WM1-EQPMT-CLASS-CODE",
+       "seq": 1700,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :1
+       1}
+       6}
+          "oneOf": [ 
+        { "$ref": "#/$defs/EQPMT_SUB_CLASS_BRKDN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_AIRCFT" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_MSL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_ENGN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_OPTNL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GSE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_PME" }
+       ]
+       6}
+       1}
+     6}
+     1}
+     "type" : "array" , "maxContains":5, "items": {
+        "type" : "object", "properties": {
+    "LDM54WM1-WUC-CODE-SYS" : {
+       "description": "WORK UNIT CODE (WUC) SYSTEM",
+       "element": "LDM54WM1-WUC-CODE-SYS",
+       "seq": 5300,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :2
+       1}
+       6}
+    ,"LDM54WM1-WUC-SUB-SYS" : {
+       "description": "WORK UNIT CODE (WUC) SUB-SYSTEM",
+       "element": "LDM54WM1-WUC-SUB-SYS",
+       "seq": 5400,
+       "relativeOffset": 2,
+       "lvl": 3,
+       "type" : "string", "maxLength" :2
+       1}
+       6}
+    ,"LDM54WM1-WUC-CMPNT-ITM" : {
+       "description": "WORK UNIT CODE (WUC) COMPONENT ITEM",
+       "element": "LDM54WM1-WUC-CMPNT-ITM",
+       "seq": 5500,
+       "relativeOffset": 4,
+       "lvl": 3,
+       "type" : "string", "maxLength" :1
+       1}
+       6}
+       1}
+     4}
+     5}
+    "LDM54WM1-WUC-CODE-SYS" : {
+       "description": "WORK UNIT CODE (WUC) SYSTEM",
+       "element": "LDM54WM1-WUC-CODE-SYS",
+       "seq": 5300,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :2
+       1}
+       6}
+    ,"LDM54WM1-WUC-SUB-SYS" : {
+       "description": "WORK UNIT CODE (WUC) SUB-SYSTEM",
+       "element": "LDM54WM1-WUC-SUB-SYS",
+       "seq": 5400,
+       "relativeOffset": 2,
+       "lvl": 3,
+       "type" : "string", "maxLength" :2
+       1}
+       6}
+    ,"LDM54WM1-WUC-CMPNT-ITM" : {
+       "description": "WORK UNIT CODE (WUC) COMPONENT ITEM",
+       "element": "LDM54WM1-WUC-CMPNT-ITM",
+       "seq": 5500,
+       "relativeOffset": 4,
+       "lvl": 3,
+       "type" : "string", "maxLength" :1
+       1}
+       6}
+       1}
+     6}
+     1}
+     "type" : "array" , "maxContains":5, "items": {
+        "type" : "object", "properties": {
+    "LDM54WM1-EQPMT-CLASS-CODE" : {
+       "description": "EQUIPMENT CLASS CODE",
+       "element": "LDM54WM1-EQPMT-CLASS-CODE",
+       "seq": 5700,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :1
+       1}
+       6}
+          "oneOf": [ 
+        { "$ref": "#/$defs/EQPMT_SUB_CLASS_BRKDN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_AIRCFT" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_MSL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_ENGN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_OPTNL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GSE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_PME" }
+       ]
+       6}
+       1}
+     4}
+     5}
+    "LDM54WM1-EQPMT-CLASS-CODE" : {
+       "description": "EQUIPMENT CLASS CODE",
+       "element": "LDM54WM1-EQPMT-CLASS-CODE",
+       "seq": 5700,
+       "relativeOffset": 0,
+       "lvl": 3,
+       "type" : "string", "maxLength" :1
+       1}
+       6}
+          "oneOf": [ 
+        { "$ref": "#/$defs/EQPMT_SUB_CLASS_BRKDN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_AIRCFT" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_MSL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_ENGN" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_OPTNL" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_GSE" }
+       ,{ "$ref": "#/$defs/EQPMT_SUB_CLASS_PME" }
+       ]
+       6}
+       1}
+     6}
+     1}
+     "type" : "array" , "maxContains":5, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-FSCM" : {
+     "description": "FEDERAL SUPPLY CODE FOR MANUFACTURER (FSCM)",
+     "element": "LDM54WM1-FSCM",
+     "seq": 9200,
+     "relativeOffset": 208,
+     "lvl": 2,
+     "type" : "string", "maxLength" :5
+     1}
+     4}
+     5}
+  "LDM54WM1-FSCM" : {
+     "description": "FEDERAL SUPPLY CODE FOR MANUFACTURER (FSCM)",
+     "element": "LDM54WM1-FSCM",
+     "seq": 9200,
+     "relativeOffset": 208,
+     "lvl": 2,
+     "type" : "string", "maxLength" :5
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":5, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-PRT-NR" : {
+     "description": "PART NUMBER",
+     "element": "LDM54WM1-PRT-NR",
+     "seq": 9300,
+     "relativeOffset": 233,
+     "lvl": 2,
+     "type" : "string", "maxLength" :32
+     1}
+     4}
+     5}
+  "LDM54WM1-PRT-NR" : {
+     "description": "PART NUMBER",
+     "element": "LDM54WM1-PRT-NR",
+     "seq": 9300,
+     "relativeOffset": 233,
+     "lvl": 2,
+     "type" : "string", "maxLength" :32
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":5, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-WRK-AR-CODE" : {
+     "description": "WORK AREA CODE",
+     "element": "LDM54WM1-WRK-AR-CODE",
+     "seq": 9400,
+     "relativeOffset": 393,
+     "lvl": 2,
+     "type" : "string", "maxLength" :2
+     1}
+     4}
+     5}
+  "LDM54WM1-WRK-AR-CODE" : {
+     "description": "WORK AREA CODE",
+     "element": "LDM54WM1-WRK-AR-CODE",
+     "seq": 9400,
+     "relativeOffset": 393,
+     "lvl": 2,
+     "type" : "string", "maxLength" :2
+     1}
+     6}
+     1}
+     "type" : "array" , "maxContains":20, "items": {
+        "type" : "object", "properties": {
+  "LDM54WM1-ORGNZTN-CODE" : {
+     "description": "ORGANIZATION CODE",
+     "element": "LDM54WM1-ORGNZTN-CODE",
+     "seq": 9500,
+     "relativeOffset": 403,
+     "lvl": 2,
+     "type" : "string", "maxLength" :8
+     1}
+     4}
+     5}
+  "LDM54WM1-ORGNZTN-CODE" : {
+     "description": "ORGANIZATION CODE",
+     "element": "LDM54WM1-ORGNZTN-CODE",
+     "seq": 9500,
+     "relativeOffset": 403,
+     "lvl": 2,
+     "type" : "string", "maxLength" :8
+     1}
+     6}
+     1}
+  "LDM54WM1-DELETE-IND" : {
+     "description": "DELETE INDICATOR",
+     "element": "LDM54WM1-DELETE-IND",
+     "seq": 9600,
+     "relativeOffset": 563,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-OPTION-IND" : {
+     "description": "OPTION-IND",
+     "element": "LDM54WM1-OPTION-IND",
+     "seq": 9700,
+     "relativeOffset": 564,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-TCI-INDCTR" : {
+     "description": "TCI-INDCTR",
+     "element": "LDM54WM1-TCI-INDCTR",
+     "seq": 9800,
+     "relativeOffset": 565,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-PHASE-IND" : {
+     "description": "PHASE-IND",
+     "element": "LDM54WM1-PHASE-IND",
+     "seq": 9900,
+     "relativeOffset": 566,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-PRDCTY-CHNG-IND" : {
+     "description": "PRDCTY-CHNG-IND",
+     "element": "LDM54WM1-PRDCTY-CHNG-IND",
+     "seq": 10000,
+     "relativeOffset": 567,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-OIL-CONSUMPTION-JSN" : {
+     "description": "OIL-CONSUMPTION-JSN",
+     "element": "LDM54WM1-OIL-CONSUMPTION-JSN",
+     "seq": 10100,
+     "relativeOffset": 568,
+     "lvl": 2,
+     "type" : "string", "maxLength" :1
+     1}
+  "LDM54WM1-DATE-OF-RVSN" : {
+     "description": "JOB-STDRD-NR",
+     "element": "LDM54WM1-DATE-OF-RVSN",
+     "seq": 10200,
+     "relativeOffset": 569,
+     "lvl": 2,
+     "type" : "string", "maxLength" :10
+     1}
+  "LDM54WM1-USER" : {
+     "description": "JOB-STDRD-NR",
+     "element": "LDM54WM1-USER",
+     "seq": 10300,
+     "relativeOffset": 579,
+     "lvl": 2,
+     "type" : "string", "maxLength" :8
+     1}
+    }
+  }
+}

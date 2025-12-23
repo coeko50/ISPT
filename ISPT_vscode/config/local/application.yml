@@ -1,0 +1,92 @@
+# Configuration for running the locally on your workstation
+# It overrides service defaults provided in src/main/resources/application.yml
+
+spring.profiles.group.httptrace: httptrace,diag
+spring.profiles.active: https,httptrace
+
+logging:
+    level:
+        com.broadcom.restapi.sdk.security: INFO
+        com.broadcom.restapi.sdk.apiml: INFO
+        com.broadcom.restapi.sdk.security.auth: INFO
+        com.broadcom.dbapi: INFO
+        org.zowe.dbapi.adsDemo : DEBUG
+        org.zowe.dbapi.eafDemo : DEBUG
+        org.zowe.dbapi.utilities : DEBUG   
+    file:
+        enabled: true
+        name: log/api.log
+        pattern: "log/xapi.%d{yyyy-MM-dd}.log" 
+        maxHistory: 30
+        totalSizeCap: 3GB
+
+server:
+    address: 0.0.0.0
+    port: 3100
+    ssl:
+        keyAlias: localhost
+        keyPassword: password
+        keyStore: config/local/keystore.p12
+        keyStorePassword: password
+        trustStore: config/local/truststore.p12
+        trustStorePassword: password
+
+apiml:
+    enabled: false
+    service:
+        # The default service ID needs to be prefix by the provider (company) ID. In the case of Broadcom MFD, it is `ca`. It contain only lowercase alphanumeric characters and need to have up to 64 characters.
+        serviceId: bcmdbapisample
+        hostname: localhost
+        ipAddress: 127.0.0.1
+        discoveryServiceUrls:
+            - https://localhost:10011/eureka
+        authentication:
+            scheme: zoweJwt
+            # scheme: httpBasicPassTicket
+            applid: TSTAPPL
+
+security:
+    cors.enabled: false
+    csrf.api.enabled: false
+    csrf.cookieSameSite: Strict
+    cookie.secure: true
+    logout:
+        # To define repository with invalid JWT is required only for SDK security provider
+        repository:
+            # Two types exist: inMemory, sharedDirectory
+            type: sharedDirectory
+            sharedDirectory: tmp
+
+dbapi:
+    pooling:
+        enabled: false
+    datasources:
+        
+        filename: config/datasources.yml
+# IDMS datasource properties
+        class: ca.idms.jdbc.IdmsDataSource
+        #class: ca.idms.jdbc.IdmsConnectionPoolDataSource
+        name: dataSourceName
+        description: description
+
+# Datacom datasource properties
+        # class: ca.datacom.jdbc.DatacomDataSource
+#        class: ca.datacom.jdbc.DatacomConnectionPoolDataSource
+#        name: dataSourceName
+#        description: description
+---
+
+# Do not use this setting in production environment!
+management:
+    trace:
+        http:
+            include: authorization-header,cookie-headers,principal,remote-address,request-headers,response-headers,session-id,time-taken
+
+---
+
+# The 'diag' profile all Spring Actuator endpoints that are accessible at /actuator endpoint.
+# This is useful for diagnostic purposes but is potentially dangerous so should not been enabled in production environments.
+spring.config.activate.on-profile: diag
+
+
+management.endpoints.web.exposure.include: "*"

@@ -1,0 +1,41 @@
+{ [
+ { "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :2, "ele" :"WE-SCHEMA-INFO"                  , "seq" :100, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :3, "ele" :"WE-SCHEMA-NAME"                  , "seq" :200, "include" :"true", "selected4Output" :"true", "updateable" :"true", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :3, "ele" :"WE-REC-COUNT"                    , "seq" :300, "include" :"true", "selected4Output" :"true", "updateable" :"true", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :3, "ele" :"WE-SCH-ELE-COUNT"                , "seq" :400, "include" :"true", "selected4Output" :"true", "updateable" :"true", "required" :"false"}
+ [
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :2, "ele" :"WE-REC-INFO"                     , "seq" :500, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :3, "ele" :"WE-REC-NAME"                     , "seq" :600, "include" :"true", "selected4Output" :"true", "updateable" :"true", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :3, "ele" :"WE-REC-VERSION"                  , "seq" :700, "include" :"true", "selected4Output" :"true", "updateable" :"true", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :3, "ele" :"WE-ELE-COUNT"                    , "seq" :800, "include" :"true", "selected4Output" :"true", "updateable" :"true", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :3, "ele" :"WE-REC-CHILDCNT"                 , "seq" :900, "include" :"true", "selected4Output" :"true", "updateable" :"true", "required" :"false"}
+]
+ [
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :2, "ele" :"WE-ELE-INFO"                     , "seq" :1000, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-RECID"                    , "seq" :1100, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-JSONFLD"                      , "seq" :1200, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-LVL"                      , "seq" :1300, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-ELEMENT"                  , "seq" :1400, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-SEQ"                      , "seq" :1500, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-CHILDCNT"                 , "seq" :1600, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-OFFSET"                   , "seq" :1700, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-LEN"                      , "seq" :1800, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-DLEN"                     , "seq" :1900, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-OCC-OFFSET"               , "seq" :2000, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-OCC"                      , "seq" :2100, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-OCCLVL"                   , "seq" :2200, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,[
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-OCCSIZE"                  , "seq" :2300, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+]
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-ISGROUPELE"               , "seq" :2400, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-ISSEL4OUPUT"              , "seq" :2500, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-ISUPDATEABLE"             , "seq" :2600, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-ISJSONREQUIRED"           , "seq" :2700, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-DTYPE"                    , "seq" :2800, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-USAGE"                    , "seq" :2900, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-PREC"                     , "seq" :3000, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-SCALE"                    , "seq" :3100, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-UDC-KEY"                  , "seq" :3200, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+,{ "rec" :"ISPT-JSONSCHEMA-EXTERNAL","lvl" :4, "ele" :"WE-ELE-UDC-VAL"                  , "seq" :3300, "include" :"false", "selected4Output" :"false", "updateable" :"false", "required" :"false"}
+]
+] }

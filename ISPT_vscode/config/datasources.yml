@@ -1,0 +1,48 @@
+# Datasource definition templates for IDMS and Datacom
+
+# IDMS Datasource definitions
+# Property names follow the conventions defined for IdmsDataSource
+# These are documented in the DataSource Connection Parameters section
+# of Using IDMS Server in the IDMS documentation
+
+dataSources:
+  - dataSourceName: NETAPI190                            
+    description: Primary SYSPLEX System S0W1 - CV 2419   
+    serverName: 192.168.24.227                           
+    portNumber: 40112                                    
+    databaseName: APPLDICT                               
+    networkProtocol: IDMS                                
+    externalWait: 0                                      
+    resourceInterval: 0                                  
+    suspendStrategy: SERVICE                             
+
+  - dataSourceName: APIDEMO                            
+    description: Primary SYSPLEX System S0W1 - CV 2419   
+    serverName: 192.168.24.227                           
+    portNumber: 40112                                    
+    databaseName: APPLDICT                               
+    networkProtocol: IDMS                                
+    externalWait: 0                                      
+    resourceInterval: 0                                  
+    suspendStrategy: SERVICE                             
+ 
+  - dataSourceName: SYSDEMO                            
+    description: REST API for system S0W1 CV 2419 - Appldict   
+    serverName: 192.168.24.227                           
+    portNumber: 40117                                   
+    databaseName: APPLDICT                               
+    networkProtocol: RESTAPI                                
+    externalWait: 0                                      
+    resourceInterval: 0                                  
+    suspendStrategy: SERVICE                             
+
+  - dataSourceName: EAFDEMO                            
+    description: REST API for system S0W1 CV 2419 - EAFDICT    
+    serverName: 192.168.24.227                           
+    portNumber: 40115                                    
+    databaseName: EAFDICT                               
+    networkProtocol: IDMS                                
+    externalWait: 0                                      
+    resourceInterval: 0                                  
+    suspendStrategy: SERVICE                             
+ 

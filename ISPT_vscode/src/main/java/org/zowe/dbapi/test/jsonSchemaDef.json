@@ -1,0 +1,176 @@
+
+{ "schema_info" : { "schema_name" : "ISPTLMOD", "rec_count" :1, "sch_ele_count" : 42, "sch_ele_offset" : 54}
+
+,"rec_info" : [ { "rec_name":"ISPT-JSONSCHEMA", "rec_version":1, "ele_count":42, "rec_childCnt":3, "rec_ele_offset":0}] 
+
+,"ele_info" : [ 
+ { "ele_node_info" : {  "parent_offset" : 0, "next_offset" : 5, "1stChild_offset" : 1} 
+ ,"ele_db_info" : {  "jsonfld" :"SCHEMA_INFO", "ele_lvl" : 2, "ele_element" :"W-SCHEMA-INFO", "ele_seq" : 100, "ele_parent_type" : "R", "ele_childcnt" : 4, "ele_offset" : 0, "ele_len" : 0, "ele_dlen" : 14, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 0, "ele_occ_offset" : 0 , "ele_occsize" : [0,0], "ele_isgroupele" :"Y", "ele_issel4ouput" :"N", "ele_isupdateable" :"N", "ele_isjsonrequired" :"Y", "ele_dtype" : 0, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :" ", "ele_udc_val" :" "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 1, "next_offset" : 2, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"SCHEMA_NAME", "ele_lvl" : 3, "ele_element" :"W-SCHEMA-NAME", "ele_seq" : 200, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 0, "ele_len" : 8, "ele_dlen" : 8, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 0, "ele_occ_offset" : 0 , "ele_occsize" : [0,0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 1, "next_offset" : 3, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"REC_COUNT", "ele_lvl" : 3, "ele_element" :"W-REC-COUNT", "ele_seq" : 300, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 8, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 0, "ele_occ_offset" : 0 , "ele_occsize" : [0,0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 1, "next_offset" : 4, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"SCH_ELE_COUNT", "ele_lvl" : 3, "ele_element" :"W-SCH-ELE-COUNT", "ele_seq" : 400, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 10, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 0, "ele_occ_offset" : 0 , "ele_occsize" : [0,0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 1, "next_offset" : -1, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"SCH_ELE_OFFSET", "ele_lvl" : 3, "ele_element" :"W-SCH-ELE-OFFSET", "ele_seq" : 500, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 12, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 0, "ele_occ_offset" : 0 , "ele_occsize" : [0,0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 0, "next_offset" : 11, "1stChild_offset" : 6} 
+ ,"ele_db_info" : {  "jsonfld" :"REC_INFO", "ele_lvl" : 2, "ele_element" :"W-REC-INFO", "ele_seq" : 600, "ele_parent_type" : "R", "ele_childcnt" : 5, "ele_offset" : 0, "ele_len" : 0, "ele_dlen" : 200, "ele_occ" : 5, "ele_occ_depend_ind" :"2", "ele_occ_depend_offset" : 8, "ele_occlvl" : 1, "ele_occ_offset" : 0, "ele_occsize" : [40, 0], "ele_isgroupele" :"Y", "ele_issel4ouput" :"N", "ele_isupdateable" :"N", "ele_isjsonrequired" :"Y", "ele_dtype" : 0, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :" ", "ele_udc_val" :" "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 6, "next_offset" : 7, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"REC_NAME", "ele_lvl" : 3, "ele_element" :"W-REC-NAME", "ele_seq" : 700, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 0, "ele_len" : 32, "ele_dlen" : 32, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 14, "ele_occsize" : [40, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 6, "next_offset" : 8, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"REC_VERSION", "ele_lvl" : 3, "ele_element" :"W-REC-VERSION", "ele_seq" : 800, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 32, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 46, "ele_occsize" : [40, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 6, "next_offset" : 9, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_COUNT", "ele_lvl" : 3, "ele_element" :"W-ELE-COUNT", "ele_seq" : 900, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 34, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 48, "ele_occsize" : [40, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 6, "next_offset" : 10, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"REC_CHILDCNT", "ele_lvl" : 3, "ele_element" :"W-REC-CHILDCNT", "ele_seq" : 1000, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 36, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 50, "ele_occsize" : [40, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 6, "next_offset" : -1, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"REC_ELE_OFFSET", "ele_lvl" : 3, "ele_element" :"W-REC-ELE-OFFSET", "ele_seq" : 1100, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 38, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 52, "ele_occsize" : [40, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 0, "next_offset" : -1, "1stChild_offset" : 12} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_INFO", "ele_lvl" : 2, "ele_element" :"W-ELE-INFO", "ele_seq" : 1200, "ele_parent_type" : "R", "ele_childcnt" : 2, "ele_offset" : 0, "ele_len" : 0, "ele_dlen" : 21000, "ele_occ" : 150, "ele_occ_depend_ind" :"2", "ele_occ_depend_offset" : 10, "ele_occlvl" : 1, "ele_occ_offset" : 0, "ele_occsize" : [140, 0], "ele_isgroupele" :"Y", "ele_issel4ouput" :"N", "ele_isupdateable" :"N", "ele_isjsonrequired" :"Y", "ele_dtype" : 0, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :" ", "ele_udc_val" :" "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 12, "next_offset" : 16, "1stChild_offset" : 13} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_NODE_INFO", "ele_lvl" : 3, "ele_element" :"W-ELE-NODE-INFO", "ele_seq" : 1300, "ele_parent_type" : "G", "ele_childcnt" : 3, "ele_offset" : 0, "ele_len" : 0, "ele_dlen" : 6, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 214, "ele_occsize" : [140, 0], "ele_isgroupele" :"Y", "ele_issel4ouput" :"N", "ele_isupdateable" :"N", "ele_isjsonrequired" :"Y", "ele_dtype" : 0, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :" ", "ele_udc_val" :" "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 13, "next_offset" : 14, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"PARENT_OFFSET", "ele_lvl" : 4, "ele_element" :"W-PARENT-OFFSET", "ele_seq" : 1400, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 0, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 0, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 13, "next_offset" : 15, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"NEXT_OFFSET", "ele_lvl" : 4, "ele_element" :"W-NEXT-OFFSET", "ele_seq" : 1500, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 2, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 2, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 13, "next_offset" : -1, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"1STCHILD_OFFSET", "ele_lvl" : 4, "ele_element" :"W-1STCHILD-OFFSET", "ele_seq" : 1600, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 4, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 4, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 12, "next_offset" : -1, "1stChild_offset" : 17} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_DB_INFO", "ele_lvl" : 3, "ele_element" :"W-ELE-DB-INFO", "ele_seq" : 1700, "ele_parent_type" : "G", "ele_childcnt" : 25, "ele_offset" : 6, "ele_len" : 0, "ele_dlen" : 134, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 220, "ele_occsize" : [140, 0], "ele_isgroupele" :"Y", "ele_issel4ouput" :"N", "ele_isupdateable" :"N", "ele_isjsonrequired" :"Y", "ele_dtype" : 0, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :" ", "ele_udc_val" :" "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 18, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"JSONFLD", "ele_lvl" : 4, "ele_element" :"W-JSONFLD", "ele_seq" : 1800, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 6, "ele_len" : 32, "ele_dlen" : 32, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 6, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 19, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_LVL", "ele_lvl" : 4, "ele_element" :"W-ELE-LVL", "ele_seq" : 1900, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 38, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 38, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 20, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_ELEMENT", "ele_lvl" : 4, "ele_element" :"W-ELE-ELEMENT", "ele_seq" : 2000, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 40, "ele_len" : 32, "ele_dlen" : 32, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 40, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 21, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_SEQ", "ele_lvl" : 4, "ele_element" :"W-ELE-SEQ", "ele_seq" : 2100, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 72, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 72, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 22, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_CHILDCNT", "ele_lvl" : 4, "ele_element" :"W-ELE-CHILDCNT", "ele_seq" : 2200, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 74, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 74, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 23, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_OFFSET", "ele_lvl" : 4, "ele_element" :"W-ELE-OFFSET", "ele_seq" : 2300, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 76, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 76, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 24, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_LEN", "ele_lvl" : 4, "ele_element" :"W-ELE-LEN", "ele_seq" : 2400, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 78, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 78, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 25, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_DLEN", "ele_lvl" : 4, "ele_element" :"W-ELE-DLEN", "ele_seq" : 2500, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 80, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 80, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 26, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_OCC", "ele_lvl" : 4, "ele_element" :"W-ELE-OCC", "ele_seq" : 2600, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 82, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 82, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 27, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_OCC_OFFSET", "ele_lvl" : 4, "ele_element" :"W-ELE-OCC-OFFSET", "ele_seq" : 2700, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 84, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 84, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 28, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_OCC_DEPEND_IND", "ele_lvl" : 4, "ele_element" :"W-ELE-OCC-DEPEND-IND", "ele_seq" : 2800, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 86, "ele_len" : 1, "ele_dlen" : 1, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 86, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 29, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_PARENT_TYPE", "ele_lvl" : 4, "ele_element" :"W-ELE-PARENT-TYPE", "ele_seq" : 2900, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 87, "ele_len" : 1, "ele_dlen" : 1, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 87, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 30, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_OCC_DEPEND_OFFSET", "ele_lvl" : 4, "ele_element" :"W-ELE-OCC-DEPEND-OFFSET", "ele_seq" : 3000, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 88, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 88, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 31, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_OCCLVL", "ele_lvl" : 4, "ele_element" :"W-ELE-OCCLVL", "ele_seq" : 3100, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 90, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 90, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 32, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_OCCSIZE", "ele_lvl" : 4, "ele_element" :"W-ELE-OCCSIZE", "ele_seq" : 3200, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 0, "ele_len" : 2, "ele_dlen" : 4, "ele_occ" : 2, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 2, "ele_occ_offset" : 0, "ele_occsize" : [2,2], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 33, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_ISGROUPELE", "ele_lvl" : 4, "ele_element" :"W-ELE-ISGROUPELE", "ele_seq" : 3300, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 96, "ele_len" : 1, "ele_dlen" : 1, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 96, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 34, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_ISSEL4OUPUT", "ele_lvl" : 4, "ele_element" :"W-ELE-ISSEL4OUPUT", "ele_seq" : 3400, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 97, "ele_len" : 1, "ele_dlen" : 1, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 97, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 35, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_ISUPDATEABLE", "ele_lvl" : 4, "ele_element" :"W-ELE-ISUPDATEABLE", "ele_seq" : 3500, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 98, "ele_len" : 1, "ele_dlen" : 1, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 98, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 36, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_ISJSONREQUIRED", "ele_lvl" : 4, "ele_element" :"W-ELE-ISJSONREQUIRED", "ele_seq" : 3600, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 99, "ele_len" : 1, "ele_dlen" : 1, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 99, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 37, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_DTYPE", "ele_lvl" : 4, "ele_element" :"W-ELE-DTYPE", "ele_seq" : 3700, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 100, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 100, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 38, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_USAGE", "ele_lvl" : 4, "ele_element" :"W-ELE-USAGE", "ele_seq" : 3800, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 102, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 102, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 39, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_PREC", "ele_lvl" : 4, "ele_element" :"W-ELE-PREC", "ele_seq" : 3900, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 104, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 104, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 40, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_SCALE", "ele_lvl" : 4, "ele_element" :"W-ELE-SCALE", "ele_seq" : 4000, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 106, "ele_len" : 2, "ele_dlen" : 2, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 106, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 5, "ele_usage" : 0
+, "ele_prec" : 15, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : 41, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_UDC_KEY", "ele_lvl" : 4, "ele_element" :"W-ELE-UDC-KEY", "ele_seq" : 4100, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 108, "ele_len" : 16, "ele_dlen" : 16, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 108, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+,{ "ele_node_info" : {  "parent_offset" : 17, "next_offset" : -1, "1stChild_offset" : -1} 
+ ,"ele_db_info" : {  "jsonfld" :"ELE_UDC_VAL", "ele_lvl" : 4, "ele_element" :"W-ELE-UDC-VAL", "ele_seq" : 4200, "ele_parent_type" : "G", "ele_childcnt" : 0, "ele_offset" : 124, "ele_len" : 16, "ele_dlen" : 16, "ele_occ" : 0, "ele_occ_depend_ind" :"N", "ele_occ_depend_offset" : 0, "ele_occlvl" : 1, "ele_occ_offset" : 124, "ele_occsize" : [140, 0], "ele_isgroupele" :"N", "ele_issel4ouput" :"Y", "ele_isupdateable" :"Y", "ele_isjsonrequired" :"N", "ele_dtype" : 1, "ele_usage" : 0
+, "ele_prec" : 0, "ele_scale" : 0, "ele_udc_key" :"  ", "ele_udc_val" :"  "}
+}
+]
+}

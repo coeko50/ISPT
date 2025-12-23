@@ -1,0 +1,19 @@
+messages:
+    - key: com.broadcom.dbapi.dataSourceNotFound
+      number: DBAP0003
+      type: ERROR
+      text: "Data source not defined: %s"
+      reason: "The data source name provided is not defined to the API server."
+      action: "Contact your administrator to supply the data source name associated with the desired database."
+    - key: com.broadcom.dbapi.resourceNotFound
+      number: DBAP0005
+      type: ERROR
+      text: "'%s' resource not found"
+      reason: "The requested resource has not been found. For example, the specified database record
+      occurrence does not exist."
+    - key: org.zowe.dbapi.sqlException
+      number: DBAP0006
+      type: ERROR
+      text: "An sql exception has occurred."
+      reason: "An sql exception has occurred during the interaction with the database associated
+      with the specified datasource."

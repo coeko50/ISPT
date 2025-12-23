@@ -1,0 +1,60 @@
+buildscript {
+    apply from: 'gradle/sdk/versions.gradle'
+    apply from: 'gradle/sdk/repositories.gradle'
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootPluginVersion}")
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version "${springBootPluginVersion}"
+    id 'java'
+    id 'jacoco'
+    id 'org.ajoberstar.grgit' version "${grgitVersion}"
+}
+
+dependencies {
+    // Declarations that are needed for Lombok:
+    annotationProcessor zipTree(file("lib/dbapi-common-${dbapiCommonVersion}.jar"))
+    annotationProcessor zipTree(file("lib/dbapi-common-lib-${dbapiCommonVersion}.jar"))
+
+    compileOnly zipTree(file("lib/dbapi-common-${dbapiCommonVersion}.jar"))
+    compileOnly zipTree(file("lib/dbapi-common-lib-${dbapiCommonVersion}.jar"))
+}
+
+// Compilation:
+
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.targetCompatibility = JavaVersion.VERSION_1_8
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+compileJava.dependsOn(processResources)
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+bootJar {
+    archiveBaseName = customBaseName
+    // Define MANIFEST.MF:
+    manifest { attributes(project.manifestAttributes) }
+}
+
+jar {
+    enabled = false //do not generate -plain.jar
+}
+
+// Execution:
+bootRun {
+    args '--spring.config.additional-location=file:./config/local/application.yml'
+    classpath zipTree(file("./lib/dbapi-common-${dbapiCommonVersion}.jar"))
+    classpath zipTree(file("./lib/dbapi-common-lib-${dbapiCommonVersion}.jar"))
+    classpath zipTree(file("./lib/idmsjdbc.jar"))
+    classpath '/Users/coeko50/Documents/GitHub/IDMS_RestApi/dbapi-demo/lib/idmsjdbc.jar'
+    classpath './lib/*'
+}
