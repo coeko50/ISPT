@@ -14,7 +14,7 @@
       *                                                                *
       * Maintenance                                                    *
       * 25/12/18  add offset field to hold to make position real for   *
-      *           subord elements                                      *
+      *           subordinate elements in a multi level group          *
       *                                                                *
       * -------------------------------------------------------------- *
       * The procedure needs these schema definitions:                  *
